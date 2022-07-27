@@ -6,6 +6,7 @@
     --primario: #016170;
     --secundario: #009393;
     --terciario: #00E0C6;
+    --gris: #efefef;
 }
 
 *{
@@ -14,6 +15,9 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+}
 
 .pane {
   background: url(wave\ \(2\).svg);
@@ -49,7 +53,8 @@ header {
 
 .menu__element:hover{
     border-bottom: 5px var(--secundario) solid;
-    animation: ease-in 1s;
+    transition: all 0.1s ease;
+
 }
 
 #landing {
@@ -59,6 +64,7 @@ header {
     margin-left: 100px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 #landing__description{
@@ -69,7 +75,6 @@ header {
 #landing__title {
     padding-left: 10px;
     padding-bottom: 15px;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 40px;
     border-left: 5px var(--secundario) solid;
@@ -85,10 +90,101 @@ header {
 
 }
 
+#learn__button{
+    justify-content: center;
+    padding: 20px;
+    background-color: #00E0C6;
+}
+
 #landing__image {
     display: inline;
     width: 500px;
     height: 500px;
     margin-right: 200px;
+}
 
+#second__pane {
+    height: 100vh;
+}
+
+#second__pane__title {
+    padding-top: 100px;
+    font-weight: 400;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    margin-bottom: 1000px;
+    
+    /* background-color: var(--secundario); */
+}
+
+#second__pane__title {
+    margin: 10px auto;
+}
+
+
+#second__pane__description {
+    margin: 0 200px;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 50px;
+}
+
+/* #second__pane__roles {
+    display: flex;
+    margin: 50px 200px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+} */
+
+#second__pane__roles {
+    display: grid;
+    margin: 50px 200px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    gap: 50px 150px;
+}
+
+#second__pane__roles__title {
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.second__pane__cards {
+    transition: box-shadow 0.3s ease;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.second__pane__cards:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card__title {
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.second__pane__cards svg {
+    margin: 0 auto;
+    background-color: #009393;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.card__paragraph {
+    line-height: 1.5;
 }
