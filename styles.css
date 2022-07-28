@@ -31,8 +31,15 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    margin: 00px 115px 30px 100px;
+    padding: 0 115px 30px 100px;
     padding-top: 20px;
+    /* background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+
 }
 
 #header__menu {
@@ -199,3 +206,64 @@ main {
 .card__paragraph {
     line-height: 1.5;
 }
+
+@media (max-width: 480px) {
+    
+    header {
+        padding-left: 25px;
+    }
+
+    
+    #header__menu {
+      display: none;
+    }
+
+    #landing__image {
+      display: none;
+    }
+
+    #landing {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #landing__title {
+        border-left: none;
+        text-align: center;
+
+    }
+
+    #landing__paragraph{
+        border-left: none;
+        text-align: center;
+    }
+
+    main {
+        margin: 25px;
+    }
+
+    .card__paragraph {
+        display: none;
+    }
+
+    #second__pane__description {
+        margin: 0 20px;
+        text-align: justify;
+        font-size: 18px;
+        line-height: 2;
+        margin-bottom: 50px;
+    }
+
+    #second__pane__roles {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content:center;
+        margin: 0;
+    }
+
+    .second__pane__cards{
+        margin: auto;
+        width: 40px;
+    }
+  }
