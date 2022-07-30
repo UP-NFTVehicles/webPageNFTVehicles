@@ -33,13 +33,17 @@ header {
     justify-content: space-between;
     padding: 0 115px 30px 100px;
     padding-top: 20px;
-    /* background-color: white;
+    background-color: white;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    z-index: 5;
 
+}
+
+#back__menu {
+    display: none;
 }
 
 #header__menu {

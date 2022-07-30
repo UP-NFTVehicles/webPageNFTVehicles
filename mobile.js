@@ -15,6 +15,7 @@ const menu_click = (ev) => {
   let left_menu = document.getElementById("back__menu");
   right_menu.style.right = "0";
   left_menu.style.left = "0";
+  left_menu.style.display = "Block";
 }
 
 const back_click = (ev) => {
@@ -34,3 +35,13 @@ menu.addEventListener("click", menu_click)
 
 const back_menu = document.getElementById("back__menu");
 back_menu.addEventListener("click", back_click)
+
+
+window.onscroll = () => {
+  if (window.scrollY > 300) {
+    document.querySelector('header').style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+  } 
+  else {
+    document.querySelector('header').style.boxShadow = "None";
+  }
+};
