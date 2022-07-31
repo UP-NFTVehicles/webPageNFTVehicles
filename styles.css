@@ -24,14 +24,15 @@ body {
   background-repeat: no-repeat;
   z-index: 5000;
   background-position: bottom right;
-  height: calc(100vh - 10px);
+  height: 100vh;
   background-color: white;
+  display: flex;
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    padding: 0 115px 30px 100px;
+    padding: 20px 100px;
     padding-top: 20px;
     background-color: white;
     position: fixed;
@@ -76,12 +77,12 @@ header {
 
 #landing {
     font-family: 'Open sans', sans-serif;
-    width: calc(100vw - 100px);
-    margin-top: 50px;
-    margin-left: 100px;
+    padding: 20px 100px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 4rem auto;
+    width: 100%;
 }
 
 #landing__description{
@@ -110,14 +111,16 @@ header {
 #learn__button{
     justify-content: center;
     padding: 20px;
+    text-decoration: none;
+    font-size: large;
     background-color: #00E0C6;
+    border-radius: 10px;
 }
 
 #landing__image {
     display: inline;
     width: 500px;
     height: 500px;
-    margin-right: 200px;
 }
 
 #second__pane {
@@ -128,7 +131,7 @@ header {
 }
 
 #second__pane__title {
-    padding-top: 100px;
+    padding-top: 50px;
     font-weight: 400;
 }
 
@@ -137,7 +140,7 @@ main {
     flex-direction: column;
     margin: 50px;
     margin-bottom: 1000px;
-    
+    padding-bottom: 50px;
     /* background-color: var(--secundario); */
 }
 
@@ -181,7 +184,6 @@ main {
 }
 
 .second__pane__cards {
-    transition: box-shadow 0.3s ease;
     min-width: 300px;
     display: flex;
     flex-direction: column;
@@ -190,6 +192,9 @@ main {
     border-radius: 50px;
     background-color: white;
     position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    transition: opacity 1s ease-out;
 }
 
 .second__pane__cards:hover{
@@ -213,9 +218,11 @@ main {
 }
 
 .card__paragraph {
+    transition: all 3ms;
     line-height: 1.5;
-    /* transition: all 10s ease-in; */
+    transition: opacity 0.3s ease-in;
 
+    /* transition: all 10s ease-in; */
 }
 
 .clickbox {
@@ -303,7 +310,8 @@ main {
     }
 
     .card__paragraph {
-        display: none;
+        height: 0;
+        opacity: 0;
     }
 
     #second__pane__description {

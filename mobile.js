@@ -3,9 +3,11 @@ let last_modification;
 const clicked = (ev) => {
     console.log(ev.target.tagName)
     var element = ev.target
-    element.parentElement.querySelector('p').style.display = "Block";
+    element.parentElement.querySelector('p').style.opacity = "100";
+    element.parentElement.querySelector('p').style.height = "auto";
     if(last_modification){
-      last_modification.parentElement.querySelector('p').style.display = "None";
+      last_modification.parentElement.querySelector('p').style.opacity = "0";
+      last_modification.parentElement.querySelector('p').style.height = "0";
     }
     last_modification = ev.target
 }
